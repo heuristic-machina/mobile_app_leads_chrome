@@ -2,7 +2,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebas
 import { getDatabase,
         ref,
         push,
-        onValue } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js"
+        onValue,
+        remove } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js"
 
 const firebaseConfig = {
     databaseURL: import.meta.env.VITE_DATABASE_URL
@@ -48,14 +49,13 @@ onValue(referenceInDB, function(snapshot) {
 
 // delete button
 deleteBtn.addEventListener('dblclick', function() {
-    console.log('dbl clicked')
+    remove(referenceInDB)
     olEl.innerHTML = ""
 })
 
 
 // input element push to array/local storage
 inputBtn.addEventListener('click', function() {
-
     push(referenceInDB, inputEl.value)
     inputEl.value = ""
 

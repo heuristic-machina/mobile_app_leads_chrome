@@ -37,15 +37,19 @@ function render(leads) {
 }
 
 onValue(referenceInDB, function(snapshot) {
-    console.log(snapshot.val())
-    const snapshotValues = snapshot.val()
-    const leads = Object.values(snapshotValues)
-    render(leads)
+    const snapshotDoesExist = snapshot.exists()
+    if (snapshotDoesExist) {
+        console.log(snapshot.val())
+        const snapshotValues = snapshot.val()
+        const leads = Object.values(snapshotValues)
+        render(leads)
+    }
 })
 
 // delete button
 deleteBtn.addEventListener('dblclick', function() {
     console.log('dbl clicked')
+    olEl.innerHTML = ""
 })
 
 

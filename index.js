@@ -37,7 +37,7 @@ function render(leads) {
 }
 
 onValue(referenceInDB, function(snapshot) {
-    console.log(snapshot)
+    console.log(snapshot.val())
 })
 
 // delete button

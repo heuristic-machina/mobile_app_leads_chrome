@@ -48,7 +48,7 @@ onValue(referenceInDB, function(snapshot) {
 })
 
 // delete button
-deleteBtn.addEventListener('dblclick', function() {
+deleteBtn.addEventListener('click', function() {
     remove(referenceInDB)
     olEl.innerHTML = ""
 })

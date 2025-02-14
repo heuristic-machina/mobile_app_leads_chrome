@@ -1,0 +1,14 @@
+{
+  "name": "mobile_app_lead_tracker",
+  "description": "lead_tracker_firebase",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vite": "latest"
+  },
+  "devDependencies": {}
+}
